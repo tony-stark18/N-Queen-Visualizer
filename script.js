@@ -1,21 +1,31 @@
 let currentSpeed = 500;
-
+let isRunning = false;
 async function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function startSimulation() {
+  if (isRunning) {
+    return;
+  }
+  document.getElementById("board").style.boxShadow = "0px 10px 40px #131313f2";
   const n = parseInt(document.getElementById("nValue").value);
   if (n > 10 || n < 4) {
     alert("Please Enter a valid Number");
     return;
   }
+  isRunning = true;
   document.getElementById("restartButton").style.display = "none"; // Hide restart button
   clearConfetti(); // Clear previous confetti
   const board = Array.from({ length: n }, () => Array(n).fill(false));
   drawBoard(n);
   const solved = await solveNQueens(board, 0, n);
-  if (solved) showConfetti(); // Show confetti if solved
+  if (solved) {
+    document.getElementById("board").style.boxShadow =
+      "0px 10px 40px #45ff868d";
+    showConfetti();
+    isRunning = false;
+  } // Show confetti if solved
 }
 
 function drawBoard(n) {
@@ -93,4 +103,5 @@ function restartGame() {
   clearConfetti();
   document.getElementById("board").innerHTML = "";
   document.getElementById("restartButton").style.display = "none";
+  document.getElementById("board").style.boxShadow = "none";
 }
