@@ -210,3 +210,118 @@ button:hover {
         font-size: 18px;
     }
 }
+
+/* Style the slider container */
+.slider-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+/* Style the range input */
+input[type="range"] {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 200px; /* Set slider width */
+    height: 10px; /* Slider track height */
+    background: #4e4e4e; /* Track color */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency */
+    transition: opacity 0.2s; /* Transition for transparency */
+    margin: 0 10px; /* Margin between label and slider */
+    border-radius: 10px;
+}
+
+/* Handle when hovering over slider */
+input[type="range"]:hover {
+    opacity: 1; /* Full opacity when hovering */
+}
+
+/* Custom thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Thumb width */
+    height: 20px; /* Thumb height */
+    background: #2ecc71; /* Thumb color */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 50%; /* Rounded thumb */
+    box-shadow: 0 0 10px #2ecc71; /* Thumb shadow */
+}
+
+/* Custom thumb for Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 20px; /* Thumb width */
+    height: 20px; /* Thumb height */
+    background: #2ecc71; /* Thumb color */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 50%; /* Rounded thumb */
+    box-shadow: 0 0 10px #2ecc71; /* Thumb shadow */
+}
+
+/* Custom track for Firefox */
+input[type="range"]::-moz-range-track {
+    height: 10px; /* Track height */
+    background: #ffcc70; /* Track color */
+}
+
+/* Custom track for IE */
+input[type="range"]::-ms-track {
+    width: 100%; /* Full width */
+    height: 10px; /* Track height */
+    background: #24222a; /* Track color */
+    border-color: transparent; /* Remove border */
+    color: transparent; /* Remove color */
+}
+
+/* Custom thumb for IE */
+input[type="range"]::-ms-thumb {
+    width: 20px; /* Thumb width */
+    height: 20px; /* Thumb height */
+    background: #2ecc71; /* Thumb color */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 50%; /* Rounded thumb */
+    box-shadow: 0 0 10px #2ecc71; /* Thumb shadow */
+}
+
+/* Custom focus outline */
+input[type="range"]:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 15px #2ecc71; /* Focus shadow */
+}
+/* Style the number input container */
+.number-input-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+/* Style the number input */
+input[type="number"] {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 60px; /* Set input width */
+    height: 40px; /* Input height */
+    background: #ffcc70; /* Input background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding inside input */
+    font-size: 1.2em; /* Font size */
+    color: #1b1b1b; /* Font color */
+    text-align: center; /* Center text */
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 10px #ffc248; /* Input shadow */
+    margin: 0 10px; /* Margin between label and input */
+}
+
+/* Style the number input when focused */
+input[type="number"]:focus {
+    box-shadow: 0 0 15px #cc2eb4; /* Focus shadow */
+    background: #ff9a9e; /* Change background color on focus */
+}
+
+/* Style the label */
+label {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-right: 10px;
+}
