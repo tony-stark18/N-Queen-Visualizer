@@ -63,6 +63,13 @@ async function solveNQueens(board, col, n) {
       await sleep(currentSpeed);
       cell.classList.remove("queen", "backtrack");
     }
+    else{
+      const cell = document.getElementById(`cell-${row}-${col}`);
+      cell.classList.add("queen", "backtrack");
+      await sleep(currentSpeed);
+      cell.classList.remove("queen","backtrack");
+    }
+    
   }
   return false;
 }
